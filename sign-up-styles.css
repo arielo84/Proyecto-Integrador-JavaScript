@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background: linear-gradient(to right, #04030a, #1d1a46, #04030a);
+}
+
+.form-register {
+  width: 500px;
+  background: #24303c;
+  padding: 30px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  box-shadow: 7px 13px 37px #000;
+}
+
+.form-register h3 {
+  font-size: 22px;
+  padding-bottom: 20px;
+}
+
+.form-register p {
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.form-register a {
+  color: white;
+}
+
+.form-register a:hover {
+  color: #1f53c5;
+}
+
+.form-register .button {
+  width: 100%;
+  background: #1f53c5;
+  border: none;
+  border-radius: 5px;
+  padding: 12px;
+  color: white;
+  margin: 16px 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.controls {
+  width: 100%;
+  background: #24303c;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 16px;
+  border: 2px solid #1f53c5;
+  font-size: 15px;
+}
+
+@media (max-width: 730px) {
+  .form-register {
+    width: 400px;
+  }
+
+  .form-register .button {
+    width: 60%;
+    margin-left: 70px;
+  }
+}

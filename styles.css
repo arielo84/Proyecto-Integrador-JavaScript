@@ -1,0 +1,722 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Inicio del Header */
+header {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  padding: 0 30px;
+  background: #434343;
+}
+
+.text-logo {
+  font-size: 12px;
+  color: red;
+}
+
+.fa-bars,
+.fa-cart-shopping,
+.fa-user {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.navbar,
+.navbar-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  gap: 30px;
+}
+.navbar-list {
+  gap: 30px;
+}
+
+.navbar-list a {
+  color: white;
+}
+
+a::after {
+  display: block;
+  content: "";
+  width: 0%;
+  height: 2px;
+  transition: 0.15s ease-in-out;
+  background-color: red;
+}
+
+a:hover::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: red;
+}
+
+.menu-label {
+  display: none;
+}
+
+/* Inicio de "carrito" */
+.cart {
+  position: absolute;
+  top: 65px;
+  right: 0;
+  padding: 50px 30px;
+  background: linear-gradient(to right, #04030a, #1d1a46, #04030a);
+  color: white;
+  border-left: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: calc(100vh - 65px);
+  overflow-y: scroll;
+  z-index: 2;
+  min-width: 375px;
+  transform: translate(200%);
+  transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
+}
+
+.cart h2 {
+  font-weight: 400;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: #0f1314;
+  padding: 40px;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.cart-item img {
+  width: 60px;
+  height: 70px;
+}
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 110px;
+}
+
+.item-title {
+  color: white;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.item-price {
+  font-size: 16px;
+  font-weight: 800;
+  background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+.item-handler {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.quantity-handler {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  color: white;
+  font-weight: 400;
+}
+
+.quantity-handler:hover {
+  cursor: pointer;
+  background-color: var(--electric);
+  transition: all 0.2s ease-in;
+}
+
+.item-quantity {
+  color: grey;
+}
+
+.up,
+.down {
+  border: 1px solid white;
+}
+
+.up:hover,
+.down:hover {
+  background: #f12711;
+}
+
+.divider {
+  margin-top: 20px;
+  border: 0.5px solid red;
+  width: 100%;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+}
+
+.total {
+  color: #30cfd0;
+  font-weight: 700;
+}
+
+.btn-buy,
+.btn-delete {
+  padding: 10px 30px;
+  background: #43cea2;
+  color: #0f1314;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s all ease-out;
+}
+
+.btn-buy:hover,
+.btn-delete:hover {
+  background: #f12711;
+  color: white;
+  transition: 0.3s all ease-out;
+}
+
+.disabled {
+  background-color: grey;
+  color: black;
+  cursor: not-allowed;
+  border: none;
+}
+
+.disabled:hover {
+  background-color: grey;
+  color: black;
+  cursor: not-allowed;
+  border: none;
+}
+
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.open-cart {
+  transform: translate(0%);
+  transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
+}
+
+.cart::-webkit-scrollbar {
+  display: none;
+}
+
+.empty-msg {
+  color: grey;
+}
+
+.add-modal {
+  padding: 15px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  transition: all 0.5s ease-out;
+  transform: translateY(200%);
+}
+
+.active-modal {
+  transform: translateY(0);
+  transition: all 0.5s ease-in;
+}
+/* Fin del "carrito" */
+
+/* Inicio del "overlay" */
+.overlay {
+  position: absolute;
+  top: 65px;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  display: none;
+}
+
+.show-overlay {
+  display: block;
+}
+
+/* Fin del Header */
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #04030a, #1d1a46, #04030a);
+}
+
+/* Inicio del Hero */
+#hero {
+  max-width: 1200px;
+  min-width: 320px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 65px;
+  padding: 50px 0;
+}
+
+.hero-info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  color: white;
+}
+
+.hero-info h2 {
+  font-size: 30px;
+}
+
+.hero-info p {
+  font-size: 18px;
+}
+
+span {
+  color: red;
+}
+
+.hero-image-container {
+  width: 400px;
+}
+
+.hero-image-container img {
+  width: 100%;
+}
+/* Fin del Hero */
+
+/* Inicio de sección "Nosotros" */
+#about-us {
+  max-width: 1200px;
+  min-width: 320px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.about-us-info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  color: white;
+}
+
+.about-us-info h2 {
+  font-size: 30px;
+}
+
+.about-us-info p {
+  font-size: 18px;
+}
+
+.about-us-image-container {
+  width: 290px;
+}
+
+.about-us-image-container img {
+  width: 100%;
+}
+/* Fin de la sección "Nosotros" */
+
+/* Inicio de la sección "Qué ofrecemos" */
+#what-we-offer {
+  max-width: 1200px;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+}
+
+#what-we-offer h2 {
+  font-size: 33px;
+  margin-bottom: 45px;
+  color: white;
+}
+
+.what-we-offer-cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.what-we-offer-card {
+  width: 300px;
+  height: 380px;
+  padding: 40px 25px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  gap: 20px;
+  background: #434343;
+  border: solid 2px white;
+}
+
+i {
+  font-size: 35px;
+  color: white;
+}
+
+.what-we-offer-cards-container h3 {
+  color: white;
+}
+/* Fin de la sección "Qué ofrecemos" */
+
+/* Inicio de la sección "Las películas más populares" */
+#the-most-popular-movies {
+  max-width: 1200px;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  gap: 50px;
+}
+
+#the-most-popular-movies h2 {
+  font-size: 33px;
+  color: white;
+}
+
+.the-most-popular-movies-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.the-most-popular-movies-card {
+  width: 300px;
+  height: 460px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  border-radius: 15px;
+  background: black;
+}
+
+.poster-img {
+  width: 85%;
+}
+
+.poster-img img {
+  width: 100%;
+}
+
+.logo-and-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+}
+
+.logo-img {
+  max-width: 35%;
+}
+
+.logo-img img {
+  width: 100%;
+}
+
+.logo-and-info p {
+  font-size: 15px;
+  font-weight: 100;
+  color: white;
+}
+/* Fin de la sección "Las películas más populares" */
+
+/* Inicio de la sección "Géneros de películas" */
+#movie-categories {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  gap: 20px;
+}
+
+#movie-categories h2 {
+  font-size: 33px;
+  color: white;
+}
+
+.categories {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 50px;
+  gap: 12px;
+}
+
+.category {
+  width: 150px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  cursor: pointer;
+  background: linear-gradient(to top, #000046, #1cb5e0);
+  border-radius: 15px;
+  box-shadow: 0px 0px 50px rgb(1 2 7 / 50%);
+}
+
+.category > * {
+  pointer-events: none;
+}
+
+.active {
+  background: grey;
+}
+
+.category-img {
+  width: 45%;
+}
+
+.category-img img {
+  width: 100%;
+}
+
+.data-and-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.data-and-detail h4 {
+  font-weight: 300;
+  color: white;
+}
+
+.detail {
+  width: 100%;
+  height: 3px;
+  border-radius: 10px;
+  background: red;
+}
+
+/* Productos */
+.our-products {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.our-products h2 {
+  font-size: 33px;
+  margin-bottom: 45px;
+  color: white;
+}
+
+.our-products-container {
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.our-products-card {
+  width: 300px;
+  height: 460px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 15px;
+  padding: 25px 10px;
+  gap: 12px;
+  background: linear-gradient(to right, #101213, #2c2d2e);
+}
+
+.our-products-poster-img {
+  width: 65%;
+  height: 58%;
+}
+
+.our-products-poster-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.our-products-logo-img {
+  width: 42%;
+}
+
+.our-products-logo-img img {
+  width: 100%;
+}
+
+.our-products-card-info {
+  font-weight: 100;
+  text-align: center;
+  color: white;
+}
+
+.our-products-card-pricing {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.our-products-card-pricing span {
+  font-size: 18px;
+  background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+.btn-add {
+  font-weight: bolder;
+  padding: 5px 12px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  color: black;
+  background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+}
+
+.btn-add:hover {
+  background: linear-gradient(to right, #f7971e, #ffd200);
+  transition: all 1.5s ease-out;
+}
+
+.btn-load {
+  background: none;
+  border: 2px solid #fcb045;
+  color: white;
+  border-radius: 10px;
+  padding: 10px 35px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+/* Fin de la sección "Géneros de películas" */
+
+footer {
+  width: 100vw;
+  padding: 35px 0;
+  background: linear-gradient(to right, #04030a, #1d1a46, #04030a);
+}
+
+.footer-data {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-links {
+  display: flex;
+  font-weight: 300;
+  gap: 15px;
+  cursor: pointer;
+  color: white;
+}
+
+.footer-links li:hover {
+  color: #1cb5e0;
+  transition: all 0.5s ease-out;
+}
+
+.footer-social-media-links {
+  display: flex;
+  cursor: pointer;
+  gap: 15px;
+}
+
+.fa-instagram:hover {
+  background: -webkit-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.fa-facebook:hover {
+  color: #4267b2;
+}
+
+.fa-whatsapp:hover {
+  color: #25d366;
+}

@@ -1,0 +1,206 @@
+@media (max-width: 990px) {
+  /* Header */
+  .navbar-list {
+    position: absolute;
+    top: 65px;
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    flex-direction: column;
+    background: linear-gradient(to right, #360033, #0b8793);
+    border: 2px solid white;
+    border-top: 0px;
+    border-radius: 0px 0px 15px 15px;
+    align-items: flex-start;
+    padding: 45px 30px;
+    gap: 25px;
+    z-index: 2;
+    display: none;
+  }
+  .menu-label {
+    display: flex;
+    order: 2;
+    cursor: pointer;
+  }
+
+  .open-menu {
+    display: flex;
+  }
+}
+
+/* Hero */
+@media (max-width: 900px) {
+  .hero-info h2 {
+    font-size: 27px;
+  }
+
+  .hero-info p {
+    font-size: 17px;
+  }
+
+  .hero-image-container {
+    width: 290px;
+  }
+
+  .hero-image-container img {
+    width: 100%;
+  }
+
+  /* Nosotros */
+  .about-us-info h2 {
+    font-size: 27px;
+  }
+
+  .about-us-info p {
+    font-size: 17px;
+  }
+
+  .about-us-image-container {
+    width: 290px;
+  }
+
+  .about-us-image-container img {
+    width: 100%;
+  }
+
+  /* Nosotros */
+  #what-we-offer h2 {
+    font-size: 28px;
+  }
+
+  /*Las películas más populares*/
+  #the-most-popular-movies h2 {
+    font-size: 25px;
+  }
+
+  /* Géneros de películas */
+  #movie-categories h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 720px) {
+  /* Hero */
+  .hero-info {
+    width: 40%;
+  }
+  /* Nosotros */
+  .about-us-info {
+    width: 50%;
+  }
+
+  .about-us-image-container {
+    width: 230px;
+  }
+
+  .about-us-image-container img {
+    width: 100%;
+  }
+
+  /* Footer */
+  .fa-instagram,
+  .fa-facebook,
+  .fa-whatsapp {
+    font-size: 27px;
+  }
+}
+
+@media (max-width: 714px) {
+  /* "Productos" */
+  .our-products-container {
+    width: 90%;
+  }
+
+  .our-products-card {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 615px) {
+  /*Hero */
+  .hero-info {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-info h2 {
+    font-size: 22px;
+  }
+
+  .hero-info p {
+    font-size: 16px;
+  }
+
+  .hero-image-container {
+    display: none;
+  }
+
+  /* Nosotros */
+  .about-us-info {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-us-info h2 {
+    font-size: 22px;
+  }
+
+  .about-us-info p {
+    font-size: 16px;
+  }
+
+  .about-us-image-container {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  /* "Carrito" */
+  .cart {
+    width: 100%;
+    left: 0;
+    border: none;
+  }
+
+  /* Footer */
+  .footer-links {
+    font-size: 15px;
+  }
+
+  .fa-instagram,
+  .fa-facebook,
+  .fa-whatsapp {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 525px) {
+  .what-we-offer h2 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 515px) {
+  /* Footer */
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .our-products-container {
+    width: 80%;
+  }
+
+  .our-products-card {
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/187d7e1c27.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="media-queries.css" />
+    <title>El Séptimo Arte</title>
+  </head>
+  <body>
+    <!-- Inicio de Header -->
+    <header>
+      <div class="text-logo">
+        <h1>El Séptimo Arte</h1>
+      </div>
+
+      <nav class="navbar">
+        <div class="menu-label">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <ul class="navbar-list">
+          <li><a class="navbar-link" href="#hero">Home</a></li>
+          <li><a class="navbar-link" href="#about-us">Nosotros</a></li>
+          <li>
+            <a class="navbar-link" href="#the-most-popular-movies">Populares</a>
+          </li>
+          <li><a class="navbar-link" href="#movie-categories">Productos</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+
+        <div class="cart-label">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+
+        <div class="user-icon">
+          <a href="login.html"><i class="fa-solid fa-user"></i></a>
+        </div>
+
+        <!-- Carrito -->
+        <div class="cart">
+          <h2>Tus películas</h2>
+          <div class="cart-container"></div>
+          <span class="divider"></span>
+          <div class="cart-total">
+            <p>Total:</p>
+            <span class="total"></span>
+          </div>
+          <button class="btn-buy">Comprar</button>
+          <button class="btn-delete">Vaciar carrito</button>
+        </div>
+        <div class="overlay"></div>
+      </nav>
+    </header>
+    <!-- Fin del Header -->
+
+    <main>
+      <!-- Inicio del Hero -->
+      <section id="hero">
+        <div class="hero-info">
+          <h2>El mejor cine en la comodidad de tu casa</h2>
+          <p>
+            <span>El Séptimo Arte</span> es el lugar donde encontrarás las
+            mejores películas del mercado. Diversidad en géneros y la máxima
+            calidad posible.
+          </p>
+        </div>
+        <div class="hero-image-container">
+          <img src="img/assets/cinema.png" alt="Cinema" />
+        </div>
+      </section>
+      <!-- Fin del Hero -->
+
+      <!-- Inicio de la sección "Nosotros" -->
+      <section id="about-us">
+        <div class="about-us-info">
+          <h2>
+            Unite al maravilloso mundo de la pantalla grande
+            <span>¡Disfrutá ahora!</span>
+          </h2>
+          <p>
+            Somos un grupo de cinéfilos que amamos el cine. A partir de ese
+            interés en común, decidimos abrir nuestro propio emprendimiento para
+            proveer los mejores films al mejor precio.
+          </p>
+        </div>
+        <div class="about-us-image-container">
+          <img src="img/assets/watching-movies.png" alt="Mirando películas" />
+        </div>
+      </section>
+      <!-- Fin de la sección "Nosotros" -->
+
+      <!-- Inicio de la sección "Qué ofrecemos" -->
+      <section id="what-we-offer">
+        <h2>Te ofrecemos <span>estos beneficios</span></h2>
+        <div class="what-we-offer-cards-container">
+          <div class="what-we-offer-card">
+            <i class="fa-solid fa-compact-disc"></i>
+            <h3>Calidad audiovisual de excelencia</h3>
+            <p>
+              Vendemos Blu-rays auténticos que te permitirán disfrutar de una
+              imagen y sonido únicos. La experiencia es increíble.
+            </p>
+          </div>
+          <div class="what-we-offer-card">
+            <i class="fa-solid fa-film"></i>
+            <h3>Diversidad en géneros</h3>
+            <p>
+              Tenemos una amplia gama de películas divididas en géneros. Ciencia
+              ficción, Fantasía, Drama, Terror, Comics, Comedia, Biopics,
+              Animación, etc.
+            </p>
+          </div>
+          <div class="what-we-offer-card">
+            <i class="fa-solid fa-percent"></i>
+            <h3>Descuentos y envíos gratis</h3>
+            <p>
+              Con la compra de 3 pelis, te hacemos un descuento del 45% por la
+              cuarta unidad y el envío es sin costo alguno.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Fin de la sección "Qué ofrecemos" -->
+
+      <!-- Inicio de la sección "Las películas más populares" -->
+      <section id="the-most-popular-movies">
+        <h2>Algunas de las películas y series más <span>populares</span></h2>
+        <div class="the-most-popular-movies-container">
+          <div class="the-most-popular-movies-card">
+            <div class="poster-img">
+              <img
+                src="img/blu-ray-and-4k-ultra-hd-movies/blu-ray-and-4k-ultra-hd-movie-posters/top-gun-maverick/top-gun-maverick.png"
+                alt="Top Gun: Maverick"
+              />
+            </div>
+            <div class="logo-and-info">
+              <div class="logo-img">
+                <img
+                  src="img/blu-ray-and-4k-ultra-hd-movies/blu-ray-and-4k-ultra-hd-movie-logos/top-gun-maverick/top-gun-maverick.png"
+                  alt="Top Gun: Maverick"
+                />
+              </div>
+              <div class="info">
+                <p>2022</p>
+                <p>2h 11min</p>
+                <p>Drama</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="the-most-popular-movies-card">
+            <div class="poster-img">
+              <img
+                src="img/blu-ray-and-4k-ultra-hd-movies/blu-ray-and-4k-ultra-hd-movie-posters/jurassic-world-dominion/jurassic-world-dominion.png"
+                alt="Jurassic World: Dominion"
+              />
+            </div>
+            <div class="logo-and-info">
+              <div class="logo-img">
+                <img
+                  src="img/blu-ray-and-4k-ultra-hd-movies/blu-ray-and-4k-ultra-hd-movie-logos/jurassic-world-dominion/jurassic-world-dominion.png"
+                  alt="Jurassic World: Dominion"
+                />
+              </div>
+              <div class="info">
+                <p>2022</p>
+                <p>2h 27min</p>
+                <p>Aventura</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="the-most-popular-movies-card">
+            <div class="poster-img">
+              <img
+                src="img/blu-ray-and-4k-ultra-hd-movies/blu-ray-and-4k-ultra-hd-movie-posters/thor-love-and-thunder/thor-love-and-thunder.png"
+                alt="Thor: Love and Thunder"
+              />
+            </div>
+            <div class="logo-and-info">
+              <div class="logo-img">
+                <img
+                  src="img/blu-ray-and-4k-ultra-hd-movies/blu-ray-and-4k-ultra-hd-movie-logos/thor-love-and-thunder/thor-love-and-thunder.png"
+                  alt="Thor: Love and Thunder"
+                />
+              </div>
+              <div class="info">
+                <p>2022</p>
+                <p>2h 5min</p>
+                <p>Comic</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="the-most-popular-movies-card">
+            <div class="poster-img">
+              <img
+                src="img/blu-ray-and-4k-ultra-hd-movies/blu-ray-and-4k-ultra-hd-movie-posters/bullet-train/bullet-train.png"
+                alt="Bullet Train"
+              />
+            </div>
+            <div class="logo-and-info">
+              <div class="logo-img">
+                <img
+                  src="img/blu-ray-and-4k-ultra-hd-movies/blu-ray-and-4k-ultra-hd-movie-logos/bullet-train/bullet-train.png"
+                  alt="Bullet Train"
+                />
+              </div>
+              <div class="info">
+                <p>2022</p>
+                <p>2h 7min</p>
+                <p>Acción</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="the-most-popular-movies-card">
+            <div class="poster-img">
+              <img
+                src="img/blu-ray-and-4k-ultra-hd-movies/blu-ray-and-4k-ultra-hd-movie-posters/avengers-endgame/avengers-endgame.png"
+                alt="Avengers: Endgame"
+              />
+            </div>
+            <div class="logo-and-info">
+              <div class="logo-img">
+                <img
+                  src="img/blu-ray-and-4k-ultra-hd-movies/blu-ray-and-4k-ultra-hd-movie-logos/avengers-endgame/avengers-endgame.png"
+                  alt="Avengers: Endgame"
+                />
+              </div>
+              <div class="info">
+                <p>2019</p>
+                <p>3h 1min</p>
+                <p>Comic</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="the-most-popular-movies-card">
+            <div class="poster-img">
+              <img
+                src="img/blu-ray-and-4k-ultra-hd-movies/blu-ray-and-4k-ultra-hd-movie-posters/elvis/elvis.png"
+                alt="Elvis"
+              />
+            </div>
+            <div class="logo-and-info">
+              <div class="logo-img">
+                <img
+                  src="img/blu-ray-and-4k-ultra-hd-movies/blu-ray-and-4k-ultra-hd-movie-logos/elvis/elvis.png"
+                  alt="Elvis"
+                />
+              </div>
+              <div class="info">
+                <p>2022</p>
+                <p>2h 39min</p>
+                <p>Biopic</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="the-most-popular-movies-card">
+            <div class="poster-img">
+              <img
+                src="img/blu-ray-and-4k-ultra-hd-series/blu-ray-and-4k-ultra-hd-series-posters/house-of-the-dragon/house-of-the-dragon.png"
+                alt="House of the Dragon"
+              />
+            </div>
+            <div class="logo-and-info">
+              <div class="logo-img">
+                <img
+                  src="img/blu-ray-and-4k-ultra-hd-series/blu-ray-and-4k-ultra-hd-series-logos/house-of-the-dragon/house-of-the-dragon.png"
+                  alt="House of the Dragon"
+                />
+              </div>
+              <div class="info">
+                <p>2022</p>
+                <p>Fantasía</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="the-most-popular-movies-card">
+            <div class="poster-img">
+              <img
+                src="img/blu-ray-and-4k-ultra-hd-movies/blu-ray-and-4k-ultra-hd-movie-posters/it/it.png"
+                alt="It"
+              />
+            </div>
+            <div class="logo-and-info">
+              <div class="logo-img">
+                <img
+                  src="img/blu-ray-and-4k-ultra-hd-movies/blu-ray-and-4k-ultra-hd-movie-logos/it/it.png"
+                  alt="It"
+                />
+              </div>
+              <div class="info">
+                <p>2017</p>
+                <p>2h 15min</p>
+                <p>Terror</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="the-most-popular-movies-card">
+            <div class="poster-img">
+              <img
+                src="img/blu-ray-and-4k-ultra-hd-movies/blu-ray-and-4k-ultra-hd-movie-posters/avatar/avatar.png"
+                alt="Avatar"
+              />
+            </div>
+            <div class="logo-and-info">
+              <div class="logo-img">
+                <img
+                  src="img/blu-ray-and-4k-ultra-hd-movies/blu-ray-and-4k-ultra-hd-movie-logos/avatar/avatar.png"
+                  alt="Avatar"
+                />
+              </div>
+              <div class="info">
+                <p>2009</p>
+                <p>2h 35min</p>
+                <p>Ciencia Ficción</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Fin de la sección "Las películas más populares" -->
+
+      <!-- Inicio de la sección "Géneros de películas" -->
+      <section id="movie-categories">
+        <h2>Géneros</h2>
+        <div class="categories">
+          <div class="category active">
+            <div class="category-img">
+              <img src="img/categories/academy-award.png" alt="Academy Award" />
+            </div>
+            <div class="data-and-detail">
+              <h4>Todas</h4>
+              <div class="detail"></div>
+            </div>
+          </div>
+
+          <div class="category" data-category="science-fiction">
+            <div class="category-img">
+              <img src="img/categories/starwars.png" alt="Star Wars" />
+            </div>
+            <div class="data-and-detail">
+              <h4>Ciencia Ficción</h4>
+              <div class="detail"></div>
+            </div>
+          </div>
+
+          <div class="category" data-category="terror">
+            <div class="category-img">
+              <img src="img/categories/jason.png" alt="Scream" />
+            </div>
+            <div class="data-and-detail">
+              <h4>Terror</h4>
+              <div class="detail"></div>
+            </div>
+          </div>
+
+          <div class="category" data-category="comic">
+            <div class="category-img">
+              <img src="img/categories/batman.png" alt="Batman" />
+            </div>
+            <div class="data-and-detail">
+              <h4>Comics</h4>
+              <div class="detail"></div>
+            </div>
+          </div>
+
+          <div class="category" data-category="fantasy">
+            <div class="category-img">
+              <img src="img/categories/harry-potter.png" alt="Harry Potter" />
+            </div>
+            <div class="data-and-detail">
+              <h4>Fantasía</h4>
+              <div class="detail"></div>
+            </div>
+          </div>
+
+          <div class="category" data-category="historical-fiction">
+            <div class="category-img">
+              <img src="img/categories/titanic.png" alt="Titanic" />
+            </div>
+            <div class="data-and-detail">
+              <h4>Ficción Histórica</h4>
+              <div class="detail"></div>
+            </div>
+          </div>
+
+          <div class="category" data-category="animation">
+            <div class="category-img">
+              <img src="img/categories/toy-story.png" alt="Toy Story" />
+            </div>
+            <div class="data-and-detail">
+              <h4>Animación</h4>
+              <div class="detail"></div>
+            </div>
+          </div>
+
+          <div class="category" data-category="biopic">
+            <div class="category-img">
+              <img src="img/categories/elvis.png" alt="Elvis" />
+            </div>
+            <div class="data-and-detail">
+              <h4>Biopic</h4>
+              <div class="detail"></div>
+            </div>
+          </div>
+
+          <div class="category" data-category="comedy">
+            <div class="category-img">
+              <img src="img/categories/zoolander.png" alt="Zoolander" />
+            </div>
+            <div class="data-and-detail">
+              <h4>Comedia</h4>
+              <div class="detail"></div>
+            </div>
+          </div>
+
+          <div class="category" data-category="drama">
+            <div class="category-img">
+              <img src="img/categories/forrest-gump.png" alt="Forrest Gump" />
+            </div>
+            <div class="data-and-detail">
+              <h4>Drama</h4>
+              <div class="detail"></div>
+            </div>
+          </div>
+
+          <div class="category" data-category="thriller">
+            <div class="category-img">
+              <img
+                src="img/categories/shutter-island.png"
+                alt="Shutter Island"
+              />
+            </div>
+            <div class="data-and-detail">
+              <h4>Thrillers</h4>
+              <div class="detail"></div>
+            </div>
+          </div>
+
+          <div class="category" data-category="classic">
+            <div class="category-img">
+              <img src="img/categories/casablanca.png" alt="Casablanca" />
+            </div>
+            <div class="data-and-detail">
+              <h4>Clásicos</h4>
+              <div class="detail"></div>
+            </div>
+          </div>
+
+          <div class="category" data-category="serie">
+            <div class="category-img">
+              <img
+                src="img/categories/game-of-thrones.png"
+                alt="Game of Thrones"
+              />
+            </div>
+            <div class="data-and-detail">
+              <h4>Series</h4>
+              <div class="detail"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Fin de la sección "Géneros de películas" -->
+
+        <!-- Productos -->
+        <div class="our-products">
+          <h2>Nuestros productos</h2>
+          <div class="our-products-container"></div>
+          <button class="btn-load">Ver más</button>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact">
+      <div class="footer-data">
+        <ul class="footer-links">
+          <li>Términos de uso</li>
+          <li>Soporte</li>
+          <li>Trabajá con nosotros</li>
+        </ul>
+        <div class="footer-social-media-links">
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-whatsapp"></i>
+        </div>
+      </div>
+    </footer>
+    <div class="add-modal"></div>
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
